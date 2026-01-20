@@ -168,7 +168,33 @@
         .feature-card:hover { border-color: var(--secondary); transform: translateY(-5px); box-shadow: 0 5px 15px rgba(255, 0, 85, 0.2); }
         .feature-card i { font-size: 2rem; color: var(--secondary); margin-bottom: 15px; }
 
-        /* --- MEDIA GALLERY --- */
+        /* NUEVO: Estilos para el Video con Zoom en G.Group */
+        .zoom-video-container {
+            margin-top: 50px;
+            perspective: 1000px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .zoom-video {
+            width: 100%;
+            max-width: 900px;
+            border-radius: 20px;
+            border: 2px solid #333;
+            transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            cursor: pointer;
+            object-fit: cover;
+        }
+
+        .zoom-video:hover {
+            transform: scale(1.08); /* Efecto Zoom */
+            border-color: var(--secondary);
+            box-shadow: 0 0 30px rgba(255, 0, 85, 0.6);
+        }
+
+        /* --- MEDIA GALLERY (VIDEOS) --- */
         .media-section { padding: 80px 20px; text-align: center; }
         
         .video-container {
@@ -321,8 +347,14 @@
             </div>
         </div>
 
-        <div style="margin-top: 40px;">
-            <img src="discoteca1.jpeg" style="width: 100%; max-width: 900px; border-radius: 10px; border: 1px solid #333;" alt="Setup Discoteca">
+        <div class="zoom-video-container">
+            <video class="zoom-video" autoplay muted loop playsinline>
+                <source src="video003.mp4" type="video/mp4">
+                Tu navegador no soporta videos.
+            </video>
+            <p style="margin-top: 15px; color: #777; font-size: 0.8rem;">
+                <i class="fas fa-eye"></i> Pasa el mouse sobre el video para ver detalle
+            </p>
         </div>
     </section>
 
