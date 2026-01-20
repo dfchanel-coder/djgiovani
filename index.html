@@ -26,7 +26,7 @@
             padding-top: 60px; /* Espacio para la barra fija superior */
         }
 
-        /* --- NUEVO: TOP PLAYER BAR --- */
+        /* --- TOP PLAYER BAR --- */
         .top-player-bar {
             position: fixed;
             top: 0;
@@ -54,20 +54,36 @@
         .player-controls i:hover { color: var(--secondary); text-shadow: 0 0 5px var(--secondary); }
         .player-controls .fa-play-circle { font-size: 1.8rem; color: var(--light); }
 
-        /* Centro: Banner Area */
-        .banner-space {
+        /* Centro: Pantalla LCD Retro (ANIMACIÓN) */
+        .lcd-display-container {
             flex-grow: 1;
             margin: 0 20px;
             height: 40px;
-            background: #111;
-            border: 1px dashed #333;
-            border-radius: 5px;
+            background: #000;
+            border: 2px inset #333;
+            border-radius: 4px;
             display: flex;
             align-items: center;
-            justify-content: center;
-            color: #555;
-            font-size: 0.8rem;
             overflow: hidden;
+            position: relative;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.8);
+        }
+
+        .scrolling-text {
+            position: absolute;
+            white-space: nowrap;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 0.9rem;
+            color: #00ff41; /* Verde Matrix */
+            text-shadow: 0 0 5px rgba(0, 255, 65, 0.5);
+            font-weight: bold;
+            text-transform: uppercase;
+            animation: scroll-left 12s linear infinite;
+        }
+
+        @keyframes scroll-left {
+            0% { transform: translateX(100%); left: 100%; }
+            100% { transform: translateX(-100%); left: -100%; }
         }
         
         /* Derecha: Redes */
@@ -81,7 +97,7 @@
 
         /* --- HERO SECTION --- */
         header {
-            height: calc(100vh - 60px); /* Restamos la barra superior */
+            height: calc(100vh - 60px);
             background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)), url('discoteca2.jpeg');
             background-size: cover;
             background-position: center;
@@ -152,7 +168,7 @@
         .feature-card:hover { border-color: var(--secondary); transform: translateY(-5px); box-shadow: 0 5px 15px rgba(255, 0, 85, 0.2); }
         .feature-card i { font-size: 2rem; color: var(--secondary); margin-bottom: 15px; }
 
-        /* --- MEDIA GALLERY (VIDEOS) --- */
+        /* --- MEDIA GALLERY --- */
         .media-section { padding: 80px 20px; text-align: center; }
         
         .video-container {
@@ -194,7 +210,6 @@
             line-height: 1.6;
         }
 
-        /* ESTILO PARA EL LINK DE FB INFORMATICA */
         .dev-link {
             color: var(--primary);
             text-decoration: none;
@@ -227,10 +242,10 @@
         }
         .wsp-float:hover { transform: scale(1.1); }
 
-        /* Responsive para barra superior */
         @media (max-width: 600px) {
-            .banner-space { display: none; } /* Ocultar banner en movil si es necesario */
-            .top-player-bar { justify-content: space-between; }
+            .lcd-display-container { display: flex; } /* Mantenemos el display en movil */
+            .scrolling-text { font-size: 0.7rem; }
+            .top-player-bar { padding: 0 10px; }
         }
 
     </style>
@@ -245,8 +260,10 @@
             <i class="fas fa-step-forward" title="Siguiente"></i>
         </div>
 
-        <div class="banner-space">
-            <span style="font-family: monospace;">[ ESPACIO PARA BANNER / PUBLICIDAD ]</span>
+        <div class="lcd-display-container">
+            <div class="scrolling-text">
+                ♪ NOW PLAYING: DJ GIOVANI - ES FIESTA ES SHOW.MP3 (128 KBPS) --- G.GROUP SONORIZACIONES EN VIVO ♪
+            </div>
         </div>
 
         <div class="top-socials">
@@ -270,7 +287,7 @@
             <h2>Sobre DJ Giovani</h2>
             <p>Con años de experiencia en el manejo de pistas y eventos, brindo una experiencia musical única adaptada a cada público. Mi misión es crear momentos inolvidables.</p>
             <br>
-            <a href="https://wa.me/59899123456" style="color: var(--secondary); text-decoration: none; font-weight: bold; font-size: 1.1rem;">
+            <a href="https://wa.me/59894302213" style="color: var(--secondary); text-decoration: none; font-weight: bold; font-size: 1.1rem;">
                 <i class="fab fa-whatsapp"></i> CONTRATAR AHORA
             </a>
         </div>
@@ -339,7 +356,7 @@
         </div>
     </footer>
 
-    <a href="https://wa.me/59899123456" class="wsp-float" target="_blank">
+    <a href="https://wa.me/59894302213" class="wsp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
