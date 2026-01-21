@@ -11,7 +11,9 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="DJ Giovani | Show & Sonorización Pro">
     <meta property="og:description" content="Sonido envolvente, iluminación robótica y pantallas LED. ¡Reserva tu fecha ahora!">
-    <meta property="og:image" content="https://raw.githubusercontent.com/dfchanel-coder/djgiovani/main/discoteca2.jpeg"> <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <meta property="og:image" content="https://raw.githubusercontent.com/dfchanel-coder/djgiovani/main/discoteca2.jpeg"> 
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
@@ -25,7 +27,7 @@
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
-        /* SCROLLBAR PERSONALIZADO (Chrome/Edge/Safari) */
+        /* SCROLLBAR PERSONALIZADO */
         ::-webkit-scrollbar { width: 10px; }
         ::-webkit-scrollbar-track { background: var(--dark); }
         ::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 5px; }
@@ -39,15 +41,15 @@
             padding-top: 60px;
         }
 
-        /* CLASES PARA ANIMACIÓN SCROLL (Reveal) */
+        /* ANIMACIÓN SCROLL (Reveal) */
         .reveal {
             opacity: 0;
-            transform: translateY(50px); /* Empieza 50px mas abajo */
+            transform: translateY(50px);
             transition: all 0.8s ease-out;
         }
         .reveal.active {
             opacity: 1;
-            transform: translateY(0); /* Sube a su lugar */
+            transform: translateY(0);
         }
 
         /* --- TOP PLAYER BAR --- */
@@ -105,7 +107,7 @@
             position: absolute; top: 0; left: 0; width: 100%; height: 100%;
             background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.9)); z-index: 1;
         }
-        .hero-content { position: relative; z-index: 2; }
+        .hero-content { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; }
         
         @keyframes slideShow {
             0% { opacity: 0; transform: scale(1); } 5% { opacity: 1; }
@@ -115,6 +117,14 @@
         .logo-main { max-width: 300px; margin-bottom: 20px; filter: drop-shadow(0 0 15px rgba(157, 0, 255, 0.6)); }
         h1 { font-size: 3rem; text-transform: uppercase; margin-bottom: 10px; text-shadow: 2px 2px 4px #000; }
         p.tagline { font-size: 1.2rem; color: #eee; letter-spacing: 2px; text-shadow: 1px 1px 2px #000; }
+        
+        /* Estilo para el nuevo banner pequeño */
+        .sub-banner {
+            max-width: 80%;
+            width: 350px; /* Tamaño ajustado */
+            margin-top: 25px; /* Separación del texto */
+            filter: drop-shadow(0 0 5px rgba(255,255,255,0.3));
+        }
 
         /* --- SECTIONS --- */
         .bio-section { padding: 80px 20px; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 40px; max-width: 1200px; margin: 0 auto; }
@@ -205,9 +215,13 @@
             <div class="slide"></div>
         </div>
         <div class="overlay-gradient"></div>
-        <div class="hero-content reveal"> <img src="djgiovanilogo.jpeg" alt="DJ Giovani Logo" class="logo-main"> 
+        <div class="hero-content reveal"> 
+             
             <h1>La Fiesta Comienza Aquí</h1>
             <p class="tagline">PROFESIONALISMO | TECNOLOGÍA | DIVERSIÓN</p>
+                       
+            
+        
         </div>
     </header>
 
@@ -295,7 +309,7 @@
             </div>
         </div>
     </section>
-
+                
     <footer class="main-footer">
         <div class="footer-socials">
             <a href="https://instagram.com/gioquinttana" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -359,7 +373,7 @@
             document.getElementById('lightbox').style.display = 'none';
         }
 
-        // --- SCROLL REVEAL ANIMATION (NUEVO) ---
+        // --- SCROLL REVEAL ANIMATION ---
         window.addEventListener('scroll', reveal);
 
         function reveal() {
@@ -367,17 +381,13 @@
             for (var i = 0; i < reveals.length; i++) {
                 var windowHeight = window.innerHeight;
                 var revealTop = reveals[i].getBoundingClientRect().top;
-                var revealPoint = 100; // Ajusta cuando empieza a aparecer
+                var revealPoint = 100; 
 
                 if (revealTop < windowHeight - revealPoint) {
                     reveals[i].classList.add('active');
-                } else {
-                    // Opcional: si quieres que desaparezcan al subir, descomenta esto
-                    // reveals[i].classList.remove('active'); 
                 }
             }
         }
-        // Ejecutar una vez al cargar para ver la primera seccion
         reveal();
     </script>
 
