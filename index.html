@@ -4,14 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>DJ Giovani | La Fiesta Comienza Aquí</title>
-    <meta name="description" content="DJ Giovani & G.Group Sonorizaciones. El mejor show de luces, sonido y pantallas LED para tu evento en Rivera y todo Uruguay.">
-    <link rel="icon" type="image/jpeg" href="djgiovanilogo.jpeg">
+    <title>DJ Giovani | Fiestas, Audio e Iluminación en Rivera</title>
+    <meta name="description" content="DJ Giovani & G.Group. El mejor servicio de DJ, alquiler de audio, iluminación robótica, pantallas LED y pistas para bodas, 15 años y eventos en Rivera, Uruguay.">
+    <meta name="keywords" content="DJ Rivera, DJ Uruguay, Alquiler de Audio Rivera, G.Group Sonorizaciones, Fiestas de 15, Casamientos Rivera, Pantallas LED, Iluminación de fiestas, DJ Giovani, Discoteca Movil">
+    <meta name="author" content="FB Informática">
+    <meta name="robots" content="index, follow">
     
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="DJ Giovani | Show & Sonorización Pro">
-    <meta property="og:description" content="Sonido envolvente, iluminación robótica y pantallas LED. ¡Reserva tu fecha ahora!">
-    <meta property="og:image" content="https://raw.githubusercontent.com/dfchanel-coder/djgiovani/main/discoteca2.jpeg"> 
+    <link rel="icon" type="image/jpeg" href="GGrouplogo.jpeg">
+    
+    <meta property="og:type" content="business.business">
+    <meta property="og:title" content="DJ Giovani | La Fiesta Comienza Aquí">
+    <meta property="og:description" content="Show de luces, sonido envolvente y la mejor música para tu evento. ¡Cotiza tu fecha en Rivera!">
+    <meta property="og:url" content="https://www.djgiovani.com">
+    <meta property="og:image" content="https://raw.githubusercontent.com/dfchanel-coder/djgiovani/main/discoteca2.jpeg">
+    <meta property="og:site_name" content="DJ Giovani">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EntertainmentBusiness",
+      "name": "DJ Giovani | G.Group Sonorizaciones",
+      "image": "https://raw.githubusercontent.com/dfchanel-coder/djgiovani/main/discoteca2.jpeg",
+      "description": "Servicio profesional de DJ, sonorización e iluminación para eventos en Rivera.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Rivera",
+        "addressRegion": "Rivera",
+        "addressCountry": "UY"
+      },
+      "telephone": "+59894302213",
+      "priceRange": "$$",
+      "url": "https://www.djgiovani.com",
+      "sameAs": [
+        "https://instagram.com/gioquinttana",
+        "https://www.facebook.com/tijuana.eventos1",
+        "https://www.tiktok.com/@giovanidj2"
+      ]
+    }
+    </script>
     
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -27,7 +57,7 @@
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
-        /* SCROLLBAR PERSONALIZADO */
+        /* SCROLLBAR */
         ::-webkit-scrollbar { width: 10px; }
         ::-webkit-scrollbar-track { background: var(--dark); }
         ::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 5px; }
@@ -41,25 +71,17 @@
             padding-top: 60px;
         }
 
-        /* ANIMACIÓN SCROLL (Reveal) */
-        .reveal {
-            opacity: 0;
-            transform: translateY(50px);
-            transition: all 0.8s ease-out;
-        }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        /* ANIMACIÓN SCROLL */
+        .reveal { opacity: 0; transform: translateY(50px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
 
-        /* --- TOP PLAYER BAR --- */
+        /* TOP PLAYER BAR */
         .top-player-bar {
             position: fixed; top: 0; left: 0; width: 100%; height: 60px;
             background: rgba(0, 0, 0, 0.95); border-bottom: 2px solid var(--primary);
             display: flex; justify-content: space-between; align-items: center; padding: 0 20px;
             z-index: 2000; box-shadow: 0 2px 10px rgba(157, 0, 255, 0.3);
         }
-
         .player-controls i { font-size: 1.2rem; margin-right: 15px; cursor: pointer; color: #777; transition: 0.3s; }
         .player-controls i:hover { color: var(--secondary); text-shadow: 0 0 5px var(--secondary); }
         .player-controls i.active-control { color: var(--light); text-shadow: 0 0 10px var(--primary); }
@@ -70,23 +92,20 @@
             border: 2px inset #333; border-radius: 4px; display: flex; align-items: center;
             overflow: hidden; position: relative; box-shadow: inset 0 0 10px rgba(0,0,0,0.8);
         }
-
         .scrolling-text {
             position: absolute; white-space: nowrap; font-family: 'Consolas', 'Monaco', monospace;
             font-size: 0.9rem; color: #00ff41; text-shadow: 0 0 5px rgba(0, 255, 65, 0.5);
             font-weight: bold; text-transform: uppercase; animation: scroll-left 12s linear infinite;
         }
         .paused-anim { animation-play-state: paused; color: #ff0055; text-shadow: 0 0 5px rgba(255, 0, 85, 0.5); }
-
         @keyframes scroll-left {
             0% { transform: translateX(100%); left: 100%; }
             100% { transform: translateX(-100%); left: -100%; }
         }
-        
         .top-socials a { color: var(--light); margin-left: 15px; font-size: 1.2rem; transition: 0.3s; }
         .top-socials a:hover { color: var(--primary); }
 
-        /* --- HERO SLIDER --- */
+        /* HERO SLIDER */
         header {
             height: calc(100vh - 60px); position: relative; overflow: hidden;
             display: flex; flex-direction: column; align-items: center; justify-content: center;
@@ -108,7 +127,6 @@
             background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.9)); z-index: 1;
         }
         .hero-content { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; }
-        
         @keyframes slideShow {
             0% { opacity: 0; transform: scale(1); } 5% { opacity: 1; }
             25% { opacity: 1; } 30% { opacity: 0; transform: scale(1.1); } 100% { opacity: 0; transform: scale(1.1); }
@@ -118,15 +136,7 @@
         h1 { font-size: 3rem; text-transform: uppercase; margin-bottom: 10px; text-shadow: 2px 2px 4px #000; }
         p.tagline { font-size: 1.2rem; color: #eee; letter-spacing: 2px; text-shadow: 1px 1px 2px #000; }
         
-        /* Estilo para el nuevo banner pequeño */
-        .sub-banner {
-            max-width: 80%;
-            width: 350px; /* Tamaño ajustado */
-            margin-top: 25px; /* Separación del texto */
-            filter: drop-shadow(0 0 5px rgba(255,255,255,0.3));
-        }
-
-        /* --- SECTIONS --- */
+        /* SECTIONS */
         .bio-section { padding: 80px 20px; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 40px; max-width: 1200px; margin: 0 auto; }
         .bio-img img { width: 300px; border-radius: 15px; box-shadow: 10px 10px 0px var(--primary); cursor: pointer; transition: transform 0.3s; }
         .bio-img img:hover { transform: scale(1.02); }
@@ -216,12 +226,9 @@
         </div>
         <div class="overlay-gradient"></div>
         <div class="hero-content reveal"> 
-             
+            <img src="djgiovanilogo.jpeg" alt="DJ Giovani Logo" class="logo-main"> 
             <h1>La Fiesta Comienza Aquí</h1>
             <p class="tagline">PROFESIONALISMO | TECNOLOGÍA | DIVERSIÓN</p>
-                       
-            
-        
         </div>
     </header>
 
@@ -309,7 +316,7 @@
             </div>
         </div>
     </section>
-                
+
     <footer class="main-footer">
         <div class="footer-socials">
             <a href="https://instagram.com/gioquinttana" target="_blank"><i class="fab fa-instagram"></i></a>
