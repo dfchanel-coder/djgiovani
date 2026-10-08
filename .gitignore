@@ -1,0 +1,11 @@
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Node (herramientas de optimización locales)
+node_modules/
+npm-debug.log*
+
+# Editor
+.vscode/
+.idea/

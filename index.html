@@ -3,38 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>DJ Giovani | Fiestas, Audio e Iluminación en Rivera</title>
-    <meta name="description" content="DJ Giovani & G.Group. El mejor servicio de DJ, alquiler de audio, iluminación robótica, pantallas LED y generador propio para eventos en Rivera, Uruguay.">
+
+    <title>DJ Giovani | DJ y G.Group Sonorizaciones en Rivera — Fiestas, Audio e Iluminación</title>
+    <meta name="description" content="DJ Giovani & G.Group: el servicio de DJ open format con audio, iluminación robótica, pantallas LED y generador propio para eventos en Rivera, Uruguay. 15 años, casamientos y fiestas sin interrupciones.">
     <meta name="keywords" content="DJ Rivera, DJ Uruguay, Alquiler de Audio Rivera, G.Group Sonorizaciones, Generador Electrico Eventos, Fiestas de 15, Casamientos Rivera, Pantallas LED, Iluminación de fiestas">
     <meta name="author" content="FB Informática">
     <meta name="robots" content="index, follow">
-    
-    <link rel="icon" type="image/jpeg" href="GGrouplogo.jpeg">
-    
-    <meta property="og:type" content="business.business">
-    <meta property="og:title" content="DJ Giovani | Energía y Fiesta Garantizada">
-    <meta property="og:description" content="Show de luces, sonido, pantallas LED y GENERADOR PROPIO. ¡Tu fiesta no se detiene!">
-    <meta property="og:url" content="https://www.djgiovani.com">
-    <meta property="og:image" content="https://raw.githubusercontent.com/dfchanel-coder/djgiovani/main/discoteca2.jpeg">
+    <link rel="canonical" href="https://www.djgiovani.com/">
+
+    <link rel="icon" type="image/png" href="media/favicon.png">
+    <link rel="apple-touch-icon" href="media/favicon.png">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
     <meta property="og:site_name" content="DJ Giovani">
-    
+    <meta property="og:locale" content="es_UY">
+    <meta property="og:title" content="DJ Giovani | Energía y Fiesta Garantizada">
+    <meta property="og:description" content="Show de luces, sonido, pantallas LED y GENERADOR PROPIO. Tu fiesta no se detiene.">
+    <meta property="og:url" content="https://www.djgiovani.com/">
+    <meta property="og:image" content="https://www.djgiovani.com/media/og-cover.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DJ Giovani | Energía y Fiesta Garantizada">
+    <meta name="twitter:description" content="DJ open format + G.Group Sonorizaciones. Sonido, luces, pantallas LED y generador propio en Rivera, Uruguay.">
+    <meta name="twitter:image" content="https://www.djgiovani.com/media/og-cover.jpg">
+
+    <!-- Structured data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "EntertainmentBusiness",
+      "@id": "https://www.djgiovani.com/#business",
       "name": "DJ Giovani | G.Group Sonorizaciones",
-      "image": "https://raw.githubusercontent.com/dfchanel-coder/djgiovani/main/discoteca2.jpeg",
-      "description": "Servicio profesional de DJ, sonorización, iluminación y generación de energía para eventos en Rivera.",
+      "logo": "https://www.djgiovani.com/media/ggroup.webp",
+      "image": "https://www.djgiovani.com/media/og-cover.jpg",
+      "description": "Servicio profesional de DJ, sonorización, iluminación LED y generación de energía propia para eventos en Rivera.",
+      "url": "https://www.djgiovani.com/",
+      "telephone": "+59894302213",
+      "priceRange": "$$",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Rivera",
         "addressRegion": "Rivera",
         "addressCountry": "UY"
       },
-      "telephone": "+59894302213",
-      "priceRange": "$$",
-      "url": "https://www.djgiovani.com",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -30.9053,
+        "longitude": -55.5508
+      },
+      "areaServed": { "@type": "City", "name": "Rivera" },
       "sameAs": [
         "https://instagram.com/gioquinttana",
         "https://www.facebook.com/tijuana.eventos1",
@@ -42,408 +63,1075 @@
       ]
     }
     </script>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Space+Grotesk:wght@400;500;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+    <!-- JS sentinel: si JS corre, las animaciones "reveal" parten ocultas -->
+    <script>document.documentElement.classList.add('js');</script>
+
     <style>
         :root {
-            --primary: #9d00ff;
-            --secondary: #ff0055;
-            --dark: #050505;
-            --light: #ffffff;
-            --gray: #111;
+            --bg: #050506;
+            --bg-2: #0b0b0f;
+            --panel: #111116;
+            --purple: #9d00ff;
+            --pink: #ff0055;
+            --green: #c8ff00;
+            --gold: #ffd700;
+            --text: #ececf5;
+            --muted: #9a9aac;
+            --line: rgba(255, 255, 255, 0.09);
+            --grad: linear-gradient(90deg, var(--purple), var(--pink));
+            --grad-soft: linear-gradient(120deg, rgba(157,0,255,.25), rgba(255,0,85,.18));
+            --ease: cubic-bezier(.22, .61, .36, 1);
+            --radius: 18px;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        /* SCROLLBAR */
-        ::-webkit-scrollbar { width: 10px; }
-        ::-webkit-scrollbar-track { background: var(--dark); }
-        ::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 5px; }
-        ::-webkit-scrollbar-thumb:hover { background: var(--secondary); }
+
+        html { scroll-behavior: smooth; }
 
         body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: var(--dark);
-            color: var(--light);
+            font-family: 'Space Grotesk', system-ui, sans-serif;
+            background: var(--bg);
+            color: var(--text);
             overflow-x: hidden;
-            padding-top: 60px;
+            padding-top: 64px;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
         }
 
-        /* ANIMACIÓN SCROLL */
-        .reveal { opacity: 0; transform: translateY(50px); transition: all 0.8s ease-out; }
-        .reveal.active { opacity: 1; transform: translateY(0); }
+        ::selection { background: var(--purple); color: #fff; }
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: var(--bg); }
+        ::-webkit-scrollbar-thumb { background: linear-gradient(var(--purple), var(--pink)); border-radius: 6px; }
 
-        /* TOP PLAYER BAR */
-        .top-player-bar {
-            position: fixed; top: 0; left: 0; width: 100%; height: 60px;
-            background: rgba(0, 0, 0, 0.95); border-bottom: 2px solid var(--primary);
-            display: flex; justify-content: space-between; align-items: center; padding: 0 20px;
-            z-index: 2000; box-shadow: 0 2px 10px rgba(157, 0, 255, 0.3);
-        }
-        .player-controls i { font-size: 1.2rem; margin-right: 15px; cursor: pointer; color: #777; transition: 0.3s; }
-        .player-controls i:hover { color: var(--secondary); text-shadow: 0 0 5px var(--secondary); }
-        .player-controls i.active-control { color: var(--light); text-shadow: 0 0 10px var(--primary); }
-        .player-controls .fa-play-circle { font-size: 1.8rem; }
+        a { color: inherit; }
+        img { display: block; max-width: 100%; }
 
-        .lcd-display-container {
-            flex-grow: 1; margin: 0 20px; height: 40px; background: #000;
-            border: 2px inset #333; border-radius: 4px; display: flex; align-items: center;
-            overflow: hidden; position: relative; box-shadow: inset 0 0 10px rgba(0,0,0,0.8);
-        }
-        .scrolling-text {
-            position: absolute; white-space: nowrap; font-family: 'Consolas', 'Monaco', monospace;
-            font-size: 0.9rem; color: #00ff41; text-shadow: 0 0 5px rgba(0, 255, 65, 0.5);
-            font-weight: bold; text-transform: uppercase; animation: scroll-left 12s linear infinite;
-        }
-        .paused-anim { animation-play-state: paused; color: #ff0055; text-shadow: 0 0 5px rgba(255, 0, 85, 0.5); }
-        @keyframes scroll-left {
-            0% { transform: translateX(100%); left: 100%; }
-            100% { transform: translateX(-100%); left: -100%; }
-        }
-        .top-socials a { color: var(--light); margin-left: 15px; font-size: 1.2rem; transition: 0.3s; }
-        .top-socials a:hover { color: var(--primary); }
+        .mono { font-family: 'Share Tech Mono', monospace; }
 
-        /* HERO SLIDER */
-        header {
-            height: calc(100vh - 60px); position: relative; overflow: hidden;
+        /* ---------- GRANO + neón cursor ---------- */
+        .noise {
+            position: fixed; inset: -50%; z-index: 2000; pointer-events: none; opacity: .05;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+            animation: grain 8s steps(8) infinite;
+        }
+        @keyframes grain {
+            0%,100% { transform: translate(0,0); } 20% { transform: translate(-4%,3%); }
+            40% { transform: translate(3%,-5%); } 60% { transform: translate(-3%,-2%); } 80% { transform: translate(4%,4%); }
+        }
+
+        .cursor-glow {
+            position: fixed; top: 0; left: 0; width: 26px; height: 26px; border-radius: 50%;
+            background: radial-gradient(circle, rgba(200,255,0,.55), rgba(157,0,255,.18) 45%, transparent 70%);
+            pointer-events: none; z-index: 2500; transform: translate(-50%,-50%);
+            transition: opacity .3s;
+            will-change: transform;
+        }
+
+        /* ---------- accesibilidad ---------- */
+        .skip-link {
+            position: absolute; left: 12px; top: -60px; z-index: 3000;
+            background: var(--green); color: #000; font-weight: 700; padding: 10px 16px; border-radius: 8px;
+            transition: top .2s; text-decoration: none;
+        }
+        .skip-link:focus { top: 12px; }
+
+        :focus-visible { outline: 2px solid var(--green); outline-offset: 3px; border-radius: 4px; }
+
+        html.js .reveal { opacity: 0; transform: translateY(26px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
+        html.js .reveal.in { opacity: 1; transform: none; }
+        .reveal[data-d="1"] { transition-delay: .08s; }
+        .reveal[data-d="2"] { transition-delay: .16s; }
+        .reveal[data-d="3"] { transition-delay: .24s; }
+
+        /* ---------- NAV ---------- */
+        .nav {
+            position: fixed; top: 0; left: 0; width: 100%; height: 64px; z-index: 1000;
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 0 clamp(16px, 4vw, 44px);
+            background: rgba(5,5,6,.82); backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--line);
+        }
+        .brand { display: flex; align-items: baseline; gap: 12px; text-decoration: none; }
+        .brand-name {
+            font-family: 'Unbounded', sans-serif; font-weight: 900; font-size: 1.05rem; letter-spacing: .5px;
+            background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent;
+        }
+        .brand-sub { font-family: 'Share Tech Mono', monospace; font-size: .68rem; color: var(--green); letter-spacing: 2px; }
+        .nav-right { display: flex; align-items: center; gap: 10px; }
+        .social-btn {
+            width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--line);
+            display: grid; place-items: center; color: var(--text); background: transparent;
+            cursor: pointer; transition: .25s var(--ease);
+        }
+        .social-btn:hover { border-color: var(--purple); color: var(--green); box-shadow: 0 0 14px rgba(157,0,255,.35); transform: translateY(-2px); }
+        .cta {
+            display: inline-flex; align-items: center; gap: 9px;
+            background: var(--grad); color: #fff; font-weight: 700; font-size: .85rem;
+            padding: 11px 20px; border-radius: 999px; text-decoration: none;
+            box-shadow: 0 4px 20px rgba(255,0,85,.35); transition: .25s var(--ease); border: none; cursor: pointer;
+        }
+        .cta:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(157,0,255,.5); }
+        .cta.ghost {
+            background: transparent; border: 1px solid rgba(255,255,255,.25); box-shadow: none; color: var(--text);
+        }
+        .cta.ghost:hover { border-color: var(--green); color: var(--green); box-shadow: none; }
+
+        .icon { width: 20px; height: 20px; fill: currentColor; flex: none; }
+        .icon-sm { width: 15px; height: 15px; }
+
+        /* ---------- HERO ---------- */
+        .hero {
+            position: relative; min-height: calc(100svh - 64px);
             display: flex; flex-direction: column; align-items: center; justify-content: center;
-            text-align: center; padding: 20px;
+            text-align: center; padding: 60px clamp(18px, 4vw, 40px) 30px; overflow: hidden;
         }
-        .hero-slider { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; }
-        .slide {
-            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            background-size: cover; background-position: center; opacity: 0;
-            animation: slideShow 16s infinite;
+        .hero-slides { position: absolute; inset: 0; z-index: 0; }
+        .slide { position: absolute; inset: 0; opacity: 0; animation: crossfade 20s infinite; }
+        .slide img { width: 100%; height: 100%; object-fit: cover; filter: saturate(1.1) brightness(.85); }
+        .slide:nth-child(1) { animation-delay: 0s; }
+        .slide:nth-child(2) { animation-delay: 5s; }
+        .slide:nth-child(3) { animation-delay: 10s; }
+        .slide:nth-child(4) { animation-delay: 15s; }
+        @keyframes crossfade {
+            0% { opacity: 0; transform: scale(1.12); } 4% { opacity: 1; }
+            23% { opacity: 1; transform: scale(1); } 27% { opacity: 0; } 100% { opacity: 0; }
         }
-        .slide:nth-child(1) { background-image: url('discoteca2.jpeg'); animation-delay: 0s; }
-        .slide:nth-child(2) { background-image: url('discoteca3.jpeg'); animation-delay: 4s; }
-        .slide:nth-child(3) { background-image: url('discoteca4.jpeg'); animation-delay: 8s; }
-        .slide:nth-child(4) { background-image: url('discoteca5.jpeg'); animation-delay: 12s; }
-        
-        .overlay-gradient {
-            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.9)); z-index: 1;
-        }
-        .hero-content { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; }
-        @keyframes slideShow {
-            0% { opacity: 0; transform: scale(1); } 5% { opacity: 1; }
-            25% { opacity: 1; } 30% { opacity: 0; transform: scale(1.1); } 100% { opacity: 0; transform: scale(1.1); }
+        .hero-overlay {
+            position: absolute; inset: 0; z-index: 1;
+            background:
+                radial-gradient(120% 90% at 50% 8%, rgba(5,5,6,.35), rgba(5,5,6,.92) 78%),
+                linear-gradient(180deg, rgba(5,5,6,.55), rgba(5,5,6,.15) 40%, var(--bg) 96%);
         }
 
-        .logo-main { max-width: 300px; margin-bottom: 20px; filter: drop-shadow(0 0 15px rgba(157, 0, 255, 0.6)); }
-        h1 { font-size: 3rem; text-transform: uppercase; margin-bottom: 10px; text-shadow: 2px 2px 4px #000; }
-        p.tagline { font-size: 1.2rem; color: #eee; letter-spacing: 2px; text-shadow: 1px 1px 2px #000; }
-        
-        /* SECTIONS */
-        .bio-section { padding: 80px 20px; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 40px; max-width: 1200px; margin: 0 auto; }
-        .bio-img img { width: 300px; border-radius: 15px; box-shadow: 10px 10px 0px var(--primary); cursor: pointer; transition: transform 0.3s; }
-        .bio-img img:hover { transform: scale(1.02); }
-        .bio-text { max-width: 500px; }
-        .bio-text h2 { color: var(--primary); margin-bottom: 15px; text-transform: uppercase; }
+        .hero-content { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; max-width: 980px; }
 
-        .equipment-section { background: var(--gray); padding: 80px 20px; text-align: center; position: relative; }
-        .g-logo { max-width: 250px; margin-bottom: 30px; }
-        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; max-width: 1200px; margin: 40px auto; }
-        .feature-card { background: #000; padding: 30px; border-radius: 10px; border: 1px solid #333; transition: 0.3s; }
-        .feature-card:hover { border-color: var(--secondary); transform: translateY(-5px); box-shadow: 0 5px 15px rgba(255, 0, 85, 0.2); }
-        .feature-card i { font-size: 2rem; color: var(--secondary); margin-bottom: 15px; }
-
-        /* ESTILO NUEVO PARA SECCION GENERADOR */
-        .generator-container {
-            margin-top: 60px;
-            background: rgba(0,0,0,0.5);
-            border: 1px solid #333;
-            border-radius: 20px;
-            padding: 40px;
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: center;
-            gap: 40px;
-            text-align: left;
-            max-width: 1000px;
-            margin-left: auto;
-            margin-right: auto;
+        .kicker {
+            font-family: 'Share Tech Mono', monospace; font-size: clamp(.7rem, 1.6vw, .85rem);
+            color: var(--green); letter-spacing: 4px; text-transform: uppercase;
+            border: 1px solid rgba(200,255,0,.35); border-radius: 999px; padding: 7px 16px;
+            background: rgba(5,5,6,.5); margin-bottom: 30px; display: inline-flex; align-items: center; gap: 10px;
         }
-        .gen-text h3 { color: var(--primary); font-size: 1.8rem; margin-bottom: 20px; text-transform: uppercase; }
-        .gen-text p { color: #ddd; margin-bottom: 15px; line-height: 1.6; }
-        .gen-text ul { list-style: none; margin-top: 15px; }
-        .gen-text li { font-size: 1.1rem; margin-bottom: 10px; color: #fff; }
-        .gen-img img {
-            width: 100%;
-            max-width: 400px;
-            border-radius: 15px;
-            border: 2px solid var(--secondary);
-            box-shadow: 0 0 20px rgba(255, 0, 85, 0.3);
-            cursor: pointer;
-            transition: transform 0.3s;
+        .kicker .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); animation: blink 1.4s steps(1) infinite; }
+        @keyframes blink { 50% { opacity: .15; } }
+
+        .hero-title {
+            font-family: 'Unbounded', sans-serif; font-weight: 900;
+            font-size: clamp(2.6rem, 9.5vw, 6.2rem); line-height: .98; letter-spacing: -1px;
+            text-transform: uppercase;
+            background: linear-gradient(100deg, #fff 8%, var(--purple) 42%, var(--pink) 68%, #fff 92%);
+            background-size: 220% auto;
+            -webkit-background-clip: text; background-clip: text; color: transparent;
+            animation: shine 7s linear infinite;
+            filter: drop-shadow(0 6px 30px rgba(157,0,255,.35));
         }
-        .gen-img img:hover { transform: scale(1.03); }
+        @keyframes shine { to { background-position: 220% center; } }
 
-        .zoom-video-container { margin-top: 50px; perspective: 1000px; display: flex; flex-direction: column; align-items: center; }
-        .zoom-video { width: 100%; max-width: 900px; border-radius: 20px; border: 2px solid #333; transition: all 0.5s; box-shadow: 0 10px 30px rgba(0,0,0,0.5); cursor: pointer; object-fit: cover; }
-        .zoom-video:hover { transform: scale(1.08); border-color: var(--secondary); box-shadow: 0 0 30px rgba(255, 0, 85, 0.6); }
+        .hero-tag {
+            margin-top: 18px; font-family: 'Unbounded', sans-serif; font-weight: 500;
+            font-size: clamp(.8rem, 2vw, 1.05rem); letter-spacing: 7px; text-transform: uppercase; color: var(--text);
+        }
+        .hero-tag em { font-style: normal; color: var(--green); }
 
-        .media-section { padding: 80px 20px; text-align: center; }
-        .video-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 40px; }
-        video { width: 100%; max-width: 500px; border-radius: 10px; border: 2px solid #333; box-shadow: 0 0 20px rgba(0,0,0,0.5); }
+        .hero-sub { margin-top: 18px; max-width: 620px; color: var(--muted); font-size: clamp(.92rem, 2vw, 1.05rem); }
 
-        .testimonials-section { padding: 80px 20px; background: #000; text-align: center; border-top: 1px solid #222; }
-        .testi-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; max-width: 1000px; margin: 40px auto 0; }
-        .testi-card { background: #1a1a1a; padding: 20px; border-radius: 10px; border-left: 4px solid var(--primary); width: 300px; text-align: left; transition: transform 0.3s; }
-        .testi-card:hover { transform: translateY(-5px); background: #222; }
-        .testi-text { font-style: italic; color: #ccc; margin-bottom: 15px; }
-        .testi-author { color: var(--secondary); font-weight: bold; font-size: 0.9rem; }
-        .stars { color: gold; margin-bottom: 10px; font-size: 0.8rem; }
+        .hero-ctas { margin-top: 34px; display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
 
-        .main-footer { background: #000; border-top: 1px solid #222; padding: 40px 20px; text-align: center; }
-        .footer-socials a { font-size: 1.5rem; color: #fff; margin: 0 15px; transition: 0.3s; }
-        .footer-socials a:hover { color: var(--secondary); }
-        .copyright { margin-top: 30px; font-size: 0.9rem; color: #777; line-height: 1.6; }
-        .dev-link { color: var(--primary); text-decoration: none; font-weight: bold; transition: 0.3s; }
-        .dev-link:hover { color: var(--secondary); text-shadow: 0 0 8px var(--secondary); }
+        .hero-stats {
+            margin-top: 54px; display: flex; flex-wrap: wrap; gap: 12px; justify-content: center;
+            font-family: 'Share Tech Mono', monospace; font-size: .72rem; letter-spacing: 2px; text-transform: uppercase; color: var(--muted);
+        }
+        .hero-stats span { border: 1px solid var(--line); padding: 8px 14px; border-radius: 999px; background: rgba(5,5,6,.45); }
+        .hero-stats b { color: var(--green); font-weight: 400; }
 
-        .wsp-float { position: fixed; bottom: 30px; right: 30px; background-color: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); text-decoration: none; z-index: 1000; transition: transform 0.3s; }
-        .wsp-float:hover { transform: scale(1.1); }
+        /* Vinilo */
+        .vinyl-wrap { margin-bottom: 28px; position: relative; width: clamp(150px, 26vw, 210px); aspect-ratio: 1; }
+        .vinyl {
+            width: 100%; height: 100%; border-radius: 50%; animation: spin 6s linear infinite;
+            animation-play-state: paused;
+            filter: drop-shadow(0 10px 34px rgba(157,0,255,.4));
+        }
+        .vinyl.spinning { animation-play-state: running; }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        .vinyl-stem { position: absolute; bottom: -34px; left: 0; right: 0; margin: auto; width: 34%; height: 44px; background: linear-gradient(180deg,#1a1a22,#060608); border-radius: 0 0 10px 10px; z-index: -1; border: 1px solid var(--line); }
 
-        @media (max-width: 600px) {
-            .lcd-display-container { display: flex; } 
-            .scrolling-text { font-size: 0.7rem; }
-            .top-player-bar { padding: 0 10px; }
+        /* ---------- TICKER ---------- */
+        .ticker {
+            border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+            background: var(--bg-2); overflow: hidden; position: relative; padding: 12px 0;
+        }
+        .ticker-track { display: inline-flex; gap: 0; white-space: nowrap; animation: tick 34s linear infinite; will-change: transform; }
+        .ticker-track span {
+            font-family: 'Unbounded', sans-serif; font-weight: 700; text-transform: uppercase;
+            font-size: .85rem; letter-spacing: 3px; padding: 0 18px; color: var(--muted);
+        }
+        .ticker-track span:nth-child(even) { color: var(--purple); }
+        .ticker-track .sep { color: var(--green); }
+        @keyframes tick { to { transform: translateX(-50%); } }
+
+        /* ---------- SECCIONES ---------- */
+        .track { position: relative; padding: clamp(70px, 10vw, 120px) clamp(18px, 4vw, 40px); max-width: 1200px; margin: 0 auto; }
+        section[id], div[id], #top { scroll-margin-top: 78px; }
+        .track-head { position: relative; margin-bottom: 54px; }
+        .track-index { font-family: 'Share Tech Mono', monospace; color: var(--green); letter-spacing: 3px; font-size: .85rem; display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+        .track-index::after { content: ""; height: 1px; width: 70px; background: var(--green); opacity: .4; }
+        .track-title {
+            font-family: 'Unbounded', sans-serif; font-weight: 900; text-transform: uppercase;
+            font-size: clamp(1.7rem, 5vw, 3rem); line-height: 1.05; letter-spacing: -.5px;
+        }
+        .track-title .hl { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .watermark {
+            position: absolute; right: -6px; top: -26px; z-index: -1; user-select: none; pointer-events: none;
+            font-family: 'Unbounded', sans-serif; font-weight: 900; text-transform: uppercase;
+            font-size: clamp(4rem, 13vw, 8rem); line-height: 1; color: transparent;
+            -webkit-text-stroke: 1px rgba(157,0,255,.22);
+            opacity: .6;
         }
 
-        .lightbox { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); display: none; justify-content: center; align-items: center; z-index: 5000; cursor: zoom-out; }
-        .lightbox img { max-width: 90%; max-height: 90%; border: 2px solid var(--primary); box-shadow: 0 0 50px rgba(157, 0, 255, 0.3); animation: zoomIn 0.3s; }
-        @keyframes zoomIn { from { transform: scale(0.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+        /* ---------- SOBRE ---------- */
+        .bio-grid { display: grid; grid-template-columns: minmax(280px, 420px) 1fr; gap: clamp(30px, 6vw, 80px); align-items: center; }
+        .bio-photo { position: relative; }
+        .bio-photo .frame {
+            border-radius: 14px; overflow: hidden; position: relative;
+            border: 1px solid var(--line);
+            box-shadow: 14px 14px 0 0 rgba(157,0,255,.35), 0 0 60px rgba(255,0,85,.15);
+        }
+        .bio-photo img { width: 100%; aspect-ratio: 3/2.4; object-fit: cover; }
+        .bio-photo .tape {
+            position: absolute; top: 14px; left: -18px; width: 110px; padding: 6px 10px; transform: rotate(-6deg);
+            background: var(--bg-2); border: 1px solid var(--line); border-radius: 6px;
+            font-family: 'Share Tech Mono', monospace; font-size: .62rem; letter-spacing: 2px; color: var(--green); text-transform: uppercase;
+            box-shadow: 0 4px 16px rgba(0,0,0,.5);
+        }
+        .bio-copy h3 { font-size: .85rem; font-family: 'Share Tech Mono', monospace; color: var(--muted); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 4px; }
+        .bio-copy p { color: var(--muted); margin-top: 14px; max-width: 540px; }
+        .bio-copy strong { color: var(--text); }
+        .chip-list { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+        .chip {
+            font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: .78rem; letter-spacing: 1px; text-transform: uppercase;
+            padding: 8px 14px; border-radius: 999px; border: 1px solid var(--line); color: var(--text);
+            background: var(--panel); transition: .25s var(--ease); cursor: default;
+        }
+        .chip:hover { border-color: var(--purple); color: var(--green); box-shadow: 0 0 14px rgba(157,0,255,.25); }
+        .bio-cta { margin-top: 30px; display: inline-flex; align-items: center; gap: 10px; color: var(--pink); font-weight: 700; text-decoration: none; }
+        .bio-cta:hover { gap: 16px; }
 
+        /* ---------- EQUIPO ---------- */
+        .equip { background: var(--bg-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+        .equip .track { max-width: 1200px; }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 18px; }
+        .card {
+            background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius);
+            padding: 26px 24px; position: relative; overflow: hidden; transition: .3s var(--ease);
+        }
+        .card::before {
+            content: ""; position: absolute; inset: 0 0 auto 0; height: 3px;
+            background: var(--grad); opacity: 0; transition: opacity .3s;
+        }
+        .card:hover { transform: translateY(-6px); border-color: rgba(157,0,255,.55); box-shadow: 0 14px 40px rgba(0,0,0,.5), 0 0 30px rgba(157,0,255,.18); }
+        .card:hover::before { opacity: 1; }
+        .card .card-num { position: absolute; top: 14px; right: 16px; font-family: 'Share Tech Mono', monospace; font-size: .7rem; color: var(--green); opacity: .7; }
+        .card-icon {
+            width: 52px; height: 52px; border-radius: 14px; display: grid; place-items: center; margin-bottom: 18px;
+            background: var(--grad-soft); border: 1px solid rgba(157,0,255,.35); color: var(--green);
+        }
+        .card-icon .icon { width: 26px; height: 26px; }
+        .card h3 { font-family: 'Unbounded', sans-serif; font-size: .95rem; margin-bottom: 8px; }
+        .card p { color: var(--muted); font-size: .88rem; }
+
+        .ggroup-brand { display: flex; align-items: center; gap: 16px; margin: 46px auto 0; justify-content: center; flex-wrap: wrap; }
+        .ggroup-logo { height: 46px; width: auto; opacity: .95; }
+
+        /* Booth video */
+        .booth {
+            margin-top: 60px; position: relative; border-radius: 22px; overflow: hidden;
+            border: 1px solid var(--line); box-shadow: 0 24px 70px rgba(0,0,0,.55), 0 0 60px rgba(255,0,85,.12);
+            background: #000;
+        }
+        .booth video { width: 100%; max-height: 78vh; object-fit: cover; display: block; }
+        .booth-ui {
+            position: absolute; inset: 0; display: grid; place-items: center; gap: 12px;
+            background: linear-gradient(180deg, rgba(5,5,6,.2), rgba(5,5,6,.55));
+            transition: opacity .4s;
+        }
+        .booth-ui.hidden { opacity: 0; pointer-events: none; }
+        .booth-chip {
+            display: inline-flex; align-items: center; gap: 10px;
+            font-family: 'Share Tech Mono', monospace; font-size: .8rem; letter-spacing: 2px; color: var(--green); text-transform: uppercase;
+            padding: 10px 18px; border-radius: 999px; border: 1px solid rgba(200,255,0,.45); background: rgba(5,5,6,.6);
+            animation: floaty 3s ease-in-out infinite;
+        }
+        @keyframes floaty { 50% { transform: translateY(-6px); } }
+        .booth-caption { margin-top: 14px; text-align: center; color: var(--muted); font-size: .8rem; font-family: 'Share Tech Mono', monospace; letter-spacing: 1px; }
+
+        /* ---------- ENERGÍA ---------- */
+        .power { background:
+            radial-gradient(90% 120% at 85% 10%, rgba(157,0,255,.16), transparent 55%),
+            radial-gradient(80% 110% at 10% 90%, rgba(255,0,85,.12), transparent 55%),
+            var(--bg); }
+        .power .track { max-width: 1200px; }
+        .ticket {
+            position: relative; border-radius: 20px; overflow: hidden;
+            border: 1px solid rgba(200,255,0,.28);
+            background: var(--bg-2);
+            display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(24px, 5vw, 60px); align-items: center;
+            padding: clamp(26px, 5vw, 60px);
+            box-shadow: 0 30px 80px rgba(0,0,0,.55), 0 0 40px rgba(200,255,0,.06);
+        }
+        .ticket::after {
+            content: ""; position: absolute; left: 0; right: 0; top: 0; height: 4px;
+            background: linear-gradient(90deg, var(--green), var(--purple), var(--pink));
+        }
+        .ticket-perf { display: flex; gap: 14px; position: absolute; left: -1px; right: -1px; top: 50%; justify-content: space-between; transform: translateY(-50%); }
+        .ticket-perf i { width: 26px; height: 26px; border-radius: 50%; background: var(--bg); border: 1px solid rgba(200,255,0,.28); z-index: 1; }
+        .power-text h3 {
+            font-family: 'Unbounded', sans-serif; font-weight: 900; text-transform: uppercase;
+            font-size: clamp(1.3rem, 3.4vw, 2rem); line-height: 1.08; color: var(--green); margin-bottom: 14px;
+        }
+        .power-text h3 span { color: var(--text); }
+        .power-text p { color: var(--muted); max-width: 480px; }
+        .power-list { list-style: none; margin-top: 20px; display: grid; gap: 10px; }
+        .power-list li { display: flex; align-items: center; gap: 10px; font-size: .95rem; }
+        .power-list .icon { width: 18px; height: 18px; color: var(--green); }
+        .power-img { position: relative; }
+        .power-img .ring {
+            position: absolute; inset: -8px; border-radius: 22px; border: 1px dashed rgba(200,255,0,.35);
+            animation: ring 20s linear infinite; pointer-events: none;
+        }
+        @keyframes ring { to { transform: rotate(360deg); } }
+        .power-img img { border-radius: 14px; width: 100%; border: 1px solid var(--line); box-shadow: 0 0 34px rgba(200,255,0,.14); }
+
+        /* ---------- VIDEOS ---------- */
+        .shows-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 22px; }
+        .show-item .show-label { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; font-family: 'Share Tech Mono', monospace; font-size: .8rem; color: var(--green); letter-spacing: 2px; }
+        .show-item video {
+            width: 100%; border-radius: 14px; border: 1px solid var(--line);
+            background: #000; box-shadow: 0 18px 50px rgba(0,0,0,.5); aspect-ratio: 9/16; object-fit: cover;
+        }
+        .show-item.wide video { aspect-ratio: 16/9; }
+
+        /* ---------- TESTIMONIOS ---------- */
+        .testi { background: var(--bg-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+        .testi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; }
+        .testi-card {
+            background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius);
+            padding: 24px 22px; position: relative; transition: .3s var(--ease);
+        }
+        .testi-card:hover { transform: translateY(-5px); border-color: rgba(255,0,85,.5); box-shadow: 0 14px 34px rgba(0,0,0,.45); }
+        .testi-card .top { width: 44px; height: 44px; border-radius: 50%; background: var(--grad); display: grid; place-items: center; color: #fff; font-family: 'Unbounded', sans-serif; font-weight: 900; margin-bottom: 16px; }
+        .stars { color: var(--gold); letter-spacing: 3px; font-size: .85rem; margin-bottom: 12px; }
+        .testi-text { font-style: italic; color: var(--text); margin-bottom: 16px; font-size: .95rem; }
+        .testi-author { color: var(--pink); font-weight: 700; font-size: .82rem; letter-spacing: 1px; text-transform: uppercase; }
+
+        /* ---------- CTA FINAL ---------- */
+        .pitch { position: relative; text-align: center; padding: clamp(80px, 12vw, 140px) 18px; overflow: hidden; }
+        .pitch::before {
+            content: "FESTEJA"; position: absolute; inset: 0; display: grid; place-items: center; z-index: 0;
+            font-family: 'Unbounded', sans-serif; font-weight: 900; text-transform: uppercase;
+            font-size: clamp(5rem, 22vw, 20rem); letter-spacing: -.04em;
+            -webkit-text-stroke: 1px rgba(157,0,255,.16); color: transparent; pointer-events: none;
+        }
+        .pitch-inner { position: relative; z-index: 1; }
+        .pitch h2 {
+            font-family: 'Unbounded', sans-serif; font-weight: 900; text-transform: uppercase;
+            font-size: clamp(1.6rem, 5vw, 3rem); max-width: 780px; margin: 0 auto;
+        }
+        .pitch h2 .hl { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .pitch p { color: var(--muted); margin: 18px auto 34px; max-width: 560px; }
+        .phone-line { font-family: 'Share Tech Mono', monospace; color: var(--text); font-size: 1.1rem; letter-spacing: 2px; margin-top: 26px; }
+        .phone-line a { color: var(--green); text-decoration: none; }
+        .phone-line a:hover { text-decoration: underline; }
+
+        /* ---------- FOOTER ---------- */
+        .footer { background: var(--bg-2); border-top: 1px solid var(--line); padding: 46px 20px 40px; }
+        .footer-grid { max-width: 1200px; margin: 0 auto; display: grid; gap: 36px; grid-template-columns: 1.2fr 1fr 1fr; }
+        .footer h3 { font-family: 'Unbounded', sans-serif; font-size: .8rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; }
+        .footer-links { list-style: none; display: grid; gap: 8px; }
+        .footer-links a { color: var(--muted); text-decoration: none; font-size: .9rem; transition: .2s; }
+        .footer-links a:hover { color: var(--green); }
+        .footer-brand p { color: var(--muted); font-size: .85rem; margin-top: 12px; max-width: 300px; }
+        .footer-socials { display: flex; gap: 10px; margin-top: 18px; }
+        .footer-bottom {
+            max-width: 1200px; margin: 40px auto 0; padding-top: 22px; border-top: 1px solid var(--line);
+            display: flex; flex-wrap: wrap; gap: 12px 24px; justify-content: space-between;
+            color: var(--muted); font-size: .78rem;
+        }
+        .dev-link { color: #c486ff; text-decoration: none; font-weight: 700; }
+        .dev-link:hover { color: var(--pink); }
+
+        /* ---------- PLAYER CONSOLE ---------- */
+        .console {
+            position: fixed; left: 50%; bottom: 14px; transform: translateX(-50%);
+            z-index: 900; max-width: min(620px, calc(100vw - 20px)); width: 100%;
+            display: flex; align-items: center; gap: 14px; padding: 10px 14px;
+            background: rgba(9,9,12,.94); border: 1px solid rgba(157,0,255,.35); border-radius: 16px;
+            box-shadow: 0 14px 50px rgba(0,0,0,.7), 0 0 30px rgba(157,0,255,.2);
+            backdrop-filter: blur(12px);
+        }
+        .eq { display: flex; align-items: flex-end; gap: 2.5px; height: 26px; width: 46px; flex: none; }
+        .eq i { width: 3px; border-radius: 2px; background: var(--green); animation: eq-idle 1s ease-in-out infinite; box-shadow: 0 0 6px rgba(200,255,0,.6); }
+        .console.playing .eq i { animation: none; }
+        .eq i:nth-child(1) { height: 40%; } .eq i:nth-child(2) { height: 85%; animation-delay: .1s; }
+        .eq i:nth-child(3) { height: 55%; animation-delay: .25s; } .eq i:nth-child(4) { height: 95%; animation-delay: .05s; }
+        .eq i:nth-child(5) { height: 65%; animation-delay: .35s; } .eq i:nth-child(6) { height: 80%; animation-delay: .18s; }
+        .eq i:nth-child(7) { height: 45%; animation-delay: .42s; } .eq i:nth-child(8) { height: 70%; animation-delay: .3s; }
+        @keyframes eq-idle {
+            0%,100% { transform: scaleY(.4); } 50% { transform: scaleY(1); }
+        }
+        .lcd {
+            flex: 1; height: 36px; background: #020403; border: 1px solid #1c2b10; border-radius: 8px;
+            overflow: hidden; position: relative; box-shadow: inset 0 0 16px rgba(0,0,0,.9);
+            display: flex; align-items: center;
+        }
+        .lcd::after {
+            content: ""; position: absolute; inset: 0; pointer-events: none;
+            background: repeating-linear-gradient(0deg, rgba(0,0,0,.35) 0 1px, transparent 1px 3px);
+        }
+        .lcd-text {
+            position: absolute; white-space: nowrap; font-family: 'Share Tech Mono', monospace;
+            font-size: .78rem; color: #b6ff2e; text-shadow: 0 0 8px rgba(200,255,0,.65); letter-spacing: 1px;
+            animation: lcdscroll 16s linear infinite;
+        }
+        .lcd-text.static { animation: none; }
+        @keyframes lcdscroll {
+            0% { transform: translateX(100%); } 8% { transform: translateX(0); }
+            92% { transform: translateX(0); } 100% { transform: translateX(-100%); }
+        }
+        .ctl { flex: none; display: flex; gap: 8px; }
+        .play-btn {
+            width: 44px; height: 44px; border-radius: 50%; border: none; cursor: pointer;
+            background: var(--grad); color: #fff; display: grid; place-items: center;
+            box-shadow: 0 0 20px rgba(255,0,85,.45); transition: .2s var(--ease);
+        }
+        .play-btn:hover { transform: scale(1.08); }
+        .play-btn .icon { width: 20px; height: 20px; }
+        .ctl-btn {
+            width: 40px; height: 44px; border-radius: 10px; border: 1px solid var(--line);
+            background: transparent; color: var(--text); cursor: pointer; display: grid; place-items: center; transition: .2s;
+        }
+        .ctl-btn:hover { color: var(--green); border-color: var(--green); }
+
+        /* ---------- WHATSAPP FLOAT ---------- */
+        .wsp {
+            position: fixed; right: 18px; bottom: 88px; z-index: 950;
+            width: 58px; height: 58px; border-radius: 50%; background: #25d366;
+            display: grid; place-items: center; color: #fff; box-shadow: 0 8px 26px rgba(37,211,102,.45);
+            transition: .25s var(--ease); text-decoration: none;
+        }
+        .wsp:hover { transform: scale(1.1); box-shadow: 0 10px 34px rgba(37,211,102,.6); }
+        .wsp .icon { width: 28px; height: 28px; }
+
+        /* ---------- LIGHTBOX ---------- */
+        .lightbox {
+            position: fixed; inset: 0; z-index: 1500; background: rgba(3,3,5,.96);
+            display: none; place-items: center; padding: 30px;
+        }
+        .lightbox.open { display: grid; }
+        .lightbox img { max-width: 94vw; max-height: 88vh; border-radius: 12px; border: 1px solid var(--line); box-shadow: 0 0 70px rgba(157,0,255,.3); }
+        .lightbox-close {
+            position: absolute; top: 20px; right: 20px; width: 46px; height: 46px; border-radius: 50%;
+            border: 1px solid var(--line); background: var(--bg-2); color: #fff; font-size: 1.2rem; cursor: pointer;
+        }
+        .lightbox-close:hover { border-color: var(--pink); color: var(--pink); }
+
+        /* ---------- RESPONSIVE ---------- */
+        @media (max-width: 860px) {
+            .bio-grid { grid-template-columns: 1fr; }
+            .ticket { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .social-btn.hide-sm { display: none; }
+        }
+        @media (max-width: 520px) {
+            .brand-sub { display: none; }
+            .console { gap: 10px; padding: 8px 10px; }
+            .ctl-btn { display: none; }
+            .wsp { bottom: 84px; right: 12px; }
+        }
+
+        /* ---------- REDUCED MOTION ---------- */
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after {
+                animation-duration: .001ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: .001ms !important;
+            }
+            .noise { animation: none; opacity: .04; }
+            .cursor-glow { display: none; }
+            .ticker-track { animation: none; }
+            .lcd-text { animation: none; }
+        }
     </style>
 </head>
 <body>
 
-    <audio id="bg-music" loop>
-        <source src="intro.mp3" type="audio/mp3">
-    </audio>
+    <a class="skip-link" href="#main">Saltar al contenido</a>
+    <div class="noise" aria-hidden="true"></div>
+    <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
 
-    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-        <img id="lightbox-img" src="" alt="Fullscreen">
-    </div>
+    <!-- SVG sprite -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <defs>
+            <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></symbol>
+            <symbol id="i-pause" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></symbol>
+            <symbol id="i-restart" viewBox="0 0 24 24"><path d="M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z"/></symbol>
+            <symbol id="i-wa" viewBox="0 0 448 512"><path fill="currentColor" d="M380.9,97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></symbol>
+            <symbol id="i-ig" viewBox="0 0 448 512"><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></symbol>
+            <symbol id="i-fb" viewBox="0 0 448 512"><path fill="currentColor" d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"/></symbol>
+            <symbol id="i-tt" viewBox="0 0 448 512"><path fill="currentColor" d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"/></symbol>
+            <symbol id="i-music" viewBox="0 0 24 24"><path fill="currentColor" d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></symbol>
+            <symbol id="i-bulb" viewBox="0 0 24 24"><path fill="currentColor" d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 8.99c0 2.16 1.37 4.19 3.01 5.59V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.42c1.64-1.4 3.01-3.43 3.01-5.59C19 5.14 15.86 2 12 2z"/></symbol>
+            <symbol id="i-tv" viewBox="0 0 24 24"><path fill="currentColor" d="M21 2H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h7v2H8v2h8v-2h-2v-2h7c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H3V4h18v12z"/></symbol>
+            <symbol id="i-fire" viewBox="0 0 24 24"><path fill="currentColor" d="M13.5.67s.74 2.65.74 4.8c0 2.06-1.35 3.73-3.41 3.73-2.07 0-3.63-1.67-3.63-3.73l.03-.36C5.21 7.51 4 10.62 4 14c0 4.42 3.58 8 8 8s8-3.58 8-8C20 8.61 17.41 3.8 13.5.67zM11.71 19c-1.78 0-3.22-1.4-3.22-3.14 0-1.62 1.05-2.76 2.81-3.12 1.77-.36 3.6-1.21 4.62-2.58.39 1.29.59 2.65.59 4.04 0 2.65-2.15 4.8-4.8 4.8z"/></symbol>
+            <symbol id="i-bolt" viewBox="0 0 24 24"><path fill="currentColor" d="M7 2v11h3v9l7-12h-4l4-8z"/></symbol>
+            <symbol id="i-check" viewBox="0 0 24 24"><path fill="currentColor" d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></symbol>
+            <symbol id="i-down" viewBox="0 0 24 24"><path fill="currentColor" d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></symbol>
+            <symbol id="i-close" viewBox="0 0 24 24"><path fill="currentColor" d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></symbol>
+            <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></symbol>
+            <symbol id="i-pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 8.99c0 6.04 7 13.01 7 13.01s7-6.97 7-13.01C19 5.13 15.87 2 12 2zm0 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/></symbol>
+        </defs>
+    </svg>
 
-    <div class="top-player-bar">
-        <div class="player-controls">
-            <i class="fas fa-step-backward" onclick="restartMusic()" title="Reiniciar"></i>
-            <i class="far fa-pause-circle" id="pauseBtn" onclick="pauseMusic()" title="Pausa"></i>
-            <i class="fas fa-play-circle" id="playBtn" onclick="playMusic()" title="Play"></i>
-            <i class="fas fa-step-forward" onclick="restartMusic()" title="Reiniciar"></i>
-        </div>
-        <div class="lcd-display-container">
-            <div class="scrolling-text" id="lcdText">
-                ♪ CLIC PLAY PARA INICIAR -- DJ GIOVANI - ES FIESTA ES SHOW.MP3 ♪
-            </div>
-        </div>
-        <div class="top-socials">
-            <a href="https://instagram.com/gioquinttana" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.facebook.com/tijuana.eventos1" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.tiktok.com/@giovanidj2" target="_blank"><i class="fab fa-tiktok"></i></a>
-        </div>
-    </div>
-
-    <header>
-        <div class="hero-slider">
-            <div class="slide"></div>
-            <div class="slide"></div>
-            <div class="slide"></div>
-            <div class="slide"></div>
-        </div>
-        <div class="overlay-gradient"></div>
-        <div class="hero-content reveal"> 
-            
-            <h1>La Fiesta Comienza Aquí</h1>
-            <p class="tagline">PROFESIONALISMO | TECNOLOGÍA | DIVERSIÓN | OPEN FORMAT</p>
-        </div>
+    <!-- NAV -->
+    <header class="nav" role="banner">
+        <a class="brand" href="#top" title="Volver al inicio">
+            <span class="brand-name">DJ&nbsp;GIOVANI</span>
+            <span class="brand-sub">G.GROUP // RIVERA</span>
+        </a>
+        <nav class="nav-right" aria-label="Redes y contacto">
+            <a class="social-btn hide-sm" href="https://instagram.com/gioquinttana" target="_blank" rel="noopener" aria-label="Instagram de DJ Giovani"><svg class="icon"><use href="#i-ig"/></svg></a>
+            <a class="social-btn hide-sm" href="https://www.facebook.com/tijuana.eventos1" target="_blank" rel="noopener" aria-label="Facebook de G.Group"><svg class="icon"><use href="#i-fb"/></svg></a>
+            <a class="social-btn hide-sm" href="https://www.tiktok.com/@giovanidj2" target="_blank" rel="noopener" aria-label="TikTok de DJ Giovani"><svg class="icon"><use href="#i-tt"/></svg></a>
+            <a class="cta" href="https://wa.me/59894302213" target="_blank" rel="noopener">
+                <svg class="icon icon-sm"><use href="#i-wa"/></svg>
+                Contratar
+            </a>
+        </nav>
     </header>
 
-    <section class="bio-section reveal">
-        <div class="bio-img">
-            <img src="Giobio.jpeg" alt="Giovani Profile" onclick="openLightbox(this.src)">
-        </div>
-        <div class="bio-text">
-            <h2>Sobre DJ Giovani - Open format</h2>
-            <p>Con años de experiencia en el manejo de pistas y eventos, brindo una experiencia musical única adaptada a cada público. Mi misión es crear momentos inolvidables.</p>
-            <br>
-            <a href="https://wa.me/59894302213" style="color: var(--secondary); text-decoration: none; font-weight: bold; font-size: 1.1rem;">
-                <i class="fab fa-whatsapp"></i> CONTRATAR AHORA
-            </a>
-        </div>
-    </section>
+    <main id="main">
 
-    <section class="equipment-section reveal">
-        <img src="GGrouplogo.jpeg" alt="G.Group Logo" class="g-logo">
-        <h2 style="margin-bottom: 20px;">Infraestructura de Alto Nivel</h2>
-        <p style="color:#ccc;">Llevamos el espectáculo visual y sonoro a donde tú estés.</p>
+        <!-- HERO -->
+        <section class="hero" id="top" aria-label="Portada">
+            <div class="hero-slides" aria-hidden="true">
+                <div class="slide"><picture><source srcset="media/discoteca2.webp" type="image/webp"><img src="media/discoteca2.jpg" alt="" fetchpriority="high"></picture></div>
+                <div class="slide"><picture><source srcset="media/discoteca3.webp" type="image/webp"><img src="media/discoteca3.jpg" alt="" loading="lazy"></picture></div>
+                <div class="slide"><picture><source srcset="media/discoteca4.webp" type="image/webp"><img src="media/discoteca4.jpg" alt="" loading="lazy"></picture></div>
+                <div class="slide"><picture><source srcset="media/discoteca5.webp" type="image/webp"><img src="media/discoteca5.jpg" alt="" loading="lazy"></picture></div>
+            </div>
+            <div class="hero-overlay" aria-hidden="true"></div>
 
-        <div class="features-grid">
-            <div class="feature-card">
-                <i class="fas fa-music"></i>
-                <h3>Sonido Envolvente</h3>
-                <p>Sistemas de audio de alta fidelidad.</p>
+            <div class="hero-content reveal">
+                <p class="kicker"><span class="dot" aria-hidden="true"></span> Rivera · Uruguay — Show &amp; Sonido</p>
+
+                <div class="vinyl-wrap" aria-hidden="true">
+                    <svg class="vinyl" id="vinyl" viewBox="0 0 200 200">
+                        <defs>
+                            <linearGradient id="vlabel" x1="0" y1="0" x2="1" y2="1">
+                                <stop offset="0" stop-color="#9d00ff"/><stop offset="1" stop-color="#ff0055"/>
+                            </linearGradient>
+                        </defs>
+                        <circle cx="100" cy="100" r="98" fill="#0b0b10" stroke="#23232e" stroke-width="2"/>
+                        <g fill="none" stroke="#17171f" stroke-width="1">
+                            <circle cx="100" cy="100" r="92"/><circle cx="100" cy="100" r="88"/>
+                            <circle cx="100" cy="100" r="84"/><circle cx="100" cy="100" r="80"/>
+                            <circle cx="100" cy="100" r="76"/><circle cx="100" cy="100" r="72"/>
+                            <circle cx="100" cy="100" r="68"/><circle cx="100" cy="100" r="64"/>
+                            <circle cx="100" cy="100" r="60"/><circle cx="100" cy="100" r="56"/>
+                            <circle cx="100" cy="100" r="52"/><circle cx="100" cy="100" r="48"/>
+                            <circle cx="100" cy="100" r="44"/><circle cx="100" cy="100" r="40"/>
+                        </g>
+                        <circle cx="100" cy="100" r="34" fill="url(#vlabel)"/>
+                        <text x="100" y="103" text-anchor="middle" font-family="Arial Black, Arial" font-weight="900" font-size="30" fill="#fff">G</text>
+                        <circle cx="100" cy="100" r="10" fill="#050506" stroke="rgba(255,255,255,.8)" stroke-width="3"/>
+                    </svg>
+                    <div class="vinyl-stem" aria-hidden="true"></div>
+                </div>
+
+                <h1 class="hero-title" data-text="DJ GIOVANI">DJ GIOVANI</h1>
+                <p class="hero-tag">Open Format <em>·</em> La Fiesta Comienza Acá</p>
+                <p class="hero-sub">DJ open format + <strong>G.Group Sonorizaciones</strong>. Sonido, luces robóticas, pantallas LED y generador propio: tu evento sin interrupciones, en cualquier lugar.</p>
+
+                <div class="hero-ctas">
+                    <a class="cta" href="https://wa.me/59894302213" target="_blank" rel="noopener">
+                        <svg class="icon icon-sm"><use href="#i-wa"/></svg> Contratar ahora
+                    </a>
+                    <a class="cta ghost" href="#equipo">
+                        Ver el show <svg class="icon icon-sm"><use href="#i-down"/></svg>
+                    </a>
+                </div>
+
+                <div class="hero-stats">
+                    <span><b>OPEN FORMAT</b> — sets a medida</span>
+                    <span><b>ENERGÍA PROPIA</b> — generador</span>
+                    <span><b>G.GROUP</b> — sonido &amp; luces</span>
+                </div>
             </div>
-            <div class="feature-card">
-                <i class="fas fa-lightbulb"></i>
-                <h3>Iluminación</h3>
-                <p>Cabezas móviles y efectos beam.</p>
-            </div>
-            <div class="feature-card">
-                <i class="fas fa-tv"></i>
-                <h3>Pantallas LED</h3>
-                <p>Visuales dinámicas personalizadas.</p>
-            </div>
-            <div class="feature-card">
-                <i class="fas fa-fire"></i>
-                <h3>Efectos</h3>
-                <p>Chispa fría y humo bajo.</p>
+        </section>
+
+        <!-- TICKER 1 -->
+        <div class="ticker" aria-hidden="true">
+            <div class="ticker-track">
+                <span>DJ Giovani</span><span class="sep">◉</span><span>G.Group Sonorizaciones</span><span class="sep">◉</span><span>Rivera · Uruguay</span><span class="sep">◉</span><span>Fiestas de 15</span><span class="sep">◉</span><span>Casamientos</span><span class="sep">◉</span><span>Eventos corporativos</span><span class="sep">◉</span>
+                <span>DJ Giovani</span><span class="sep">◉</span><span>G.Group Sonorizaciones</span><span class="sep">◉</span><span>Rivera · Uruguay</span><span class="sep">◉</span><span>Fiestas de 15</span><span class="sep">◉</span><span>Casamientos</span><span class="sep">◉</span><span>Eventos corporativos</span><span class="sep">◉</span>
             </div>
         </div>
 
-        <div class="generator-container">
-            <div class="gen-text">
-                <h3><i class="fas fa-bolt"></i> Energía Garantizada</h3>
-                <p>Para tu tranquilidad y la de tus invitados, incorporamos <strong>Generador Propio</strong>. Garantizamos energía estable en cada evento sin importar el lugar, asegurando que la fiesta no se detenga.</p>
-                <ul>
-                    <li><i class="fas fa-check-circle" style="color: #00ff41; margin-right:10px;"></i> Más Autonomía y Seguridad</li>
-                    <li><i class="fas fa-check-circle" style="color: #00ff41; margin-right:10px;"></i> Cero Interrupciones</li>
-                    <li><i class="fas fa-check-circle" style="color: #00ff41; margin-right:10px;"></i> Servicio Integral Completo</li>
+        <!-- #01 SOBRE -->
+        <section class="track" id="sobre" aria-label="Sobre DJ Giovani">
+            <div class="track-head reveal">
+                <p class="track-index">#01 — EL DJ</p>
+                <span class="watermark" aria-hidden="true">GIOVANI</span>
+                <h2 class="track-title">Un solo nombre<br>en la <span class="hl">pista</span></h2>
+            </div>
+
+            <div class="bio-grid">
+                <div class="bio-photo reveal" data-d="1">
+                    <div class="frame">
+                        <picture><source srcset="media/bio.webp" type="image/webp"><img src="media/bio.jpg" alt="DJ Giovani operando el set en un evento" loading="lazy" decoding="async"></picture>
+                    </div>
+                    <p class="tape">G.GROUP SONORIZACIONES</p>
+                </div>
+                <div class="bio-copy reveal" data-d="2">
+                    <h3>Perfil</h3>
+                    <p>Con años de experiencia curando pistas para <strong>15 años</strong>, <strong>casamientos</strong> y noches de club, DJ Giovani adapta cada set a su público: del primer tema al momento peak, del open format a la hora mágica.</p>
+                    <p>Detrás, el equipo de <strong>G.Group Sonorizaciones</strong> sostiene el show con infraestructura profesional de audio, iluminación robótica y pantallas LED.</p>
+
+                    <div class="chip-list" aria-label="Estilos musicales">
+                        <span class="chip">Open Format</span>
+                        <span class="chip">Cumbia</span>
+                        <span class="chip">Reggaetón</span>
+                        <span class="chip">Electrónica</span>
+                        <span class="chip">Brazilian Funk</span>
+                        <span class="chip">Hits &amp; Clásicos</span>
+                    </div>
+
+                    <a class="bio-cta" href="https://wa.me/59894302213" target="_blank" rel="noopener">
+                        <svg class="icon icon-sm"><use href="#i-wa"/></svg>
+                        Contratar ahora
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- #02 EQUIPO -->
+        <section class="equip" id="equipo" aria-label="Equipamiento G.Group">
+            <div class="track">
+                <div class="track-head reveal">
+                    <p class="track-index">#02 — G.GROUP</p>
+                    <span class="watermark" aria-hidden="true">EQUIPO</span>
+                    <h2 class="track-title">Infraestructura de<br><span class="hl">alto nivel</span></h2>
+                </div>
+
+                <div class="features-grid">
+                    <article class="card reveal">
+                        <span class="card-num">A1</span>
+                        <div class="card-icon"><svg class="icon"><use href="#i-music"/></svg></div>
+                        <h3>Sonido Envolvente</h3>
+                        <p>Sistemas de audio de alta fidelidad que llenan cualquier salón, del quincho al salón de fiestas.</p>
+                    </article>
+                    <article class="card reveal" data-d="1">
+                        <span class="card-num">A2</span>
+                        <div class="card-icon"><svg class="icon"><use href="#i-bulb"/></svg></div>
+                        <h3>Iluminación</h3>
+                        <p>Cabezas móviles y beams robóticos sincronizados con la música para cambiar el clima del salón.</p>
+                    </article>
+                    <article class="card reveal" data-d="2">
+                        <span class="card-num">A3</span>
+                        <div class="card-icon"><svg class="icon"><use href="#i-tv"/></svg></div>
+                        <h3>Pantallas LED</h3>
+                        <p>Visuales dinámicas y branding personalizado para tu fiesta. El show también se ve.</p>
+                    </article>
+                    <article class="card reveal" data-d="3">
+                        <span class="card-num">A4</span>
+                        <div class="card-icon"><svg class="icon"><use href="#i-fire"/></svg></div>
+                        <h3>Efectos</h3>
+                        <p>Chispa fría y humo bajo para el momento peak. Ese instante que nadie olvida.</p>
+                    </article>
+                </div>
+
+                <div class="ggroup-brand reveal">
+                    <img class="ggroup-logo" src="media/ggroup.webp" alt="Logo de G.Group Sonorizaciones" loading="lazy" decoding="async">
+                </div>
+
+                <div class="booth reveal" id="booth">
+                    <video id="boothVideo" loop muted playsinline preload="metadata" poster="media/discoteca5.webp" aria-label="Video del show de DJ Giovani">
+                        <source src="media/video003.mp4" type="video/mp4">
+                    </video>
+                    <div class="booth-ui" id="boothUI">
+                        <span class="booth-chip"><svg class="icon icon-sm"><use href="#i-play"/></svg> Pasa el mouse / tocá para reproducir</span>
+                    </div>
+                </div>
+                <p class="booth-caption reveal">EL SHOW EN MARCHA — SONIDO + LUZ + PANTALLA</p>
+            </div>
+        </section>
+
+        <!-- #03 ENERGÍA -->
+        <section class="power" id="energia" aria-label="Generador propio">
+            <div class="track">
+                <div class="track-head reveal">
+                    <p class="track-index">#03 — ENERGÍA</p>
+                    <span class="watermark" aria-hidden="true">POWER</span>
+                    <h2 class="track-title">La fiesta<br>no se detiene</h2>
+                </div>
+
+                <div class="ticket reveal">
+                    <div class="ticket-perf" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                    <div class="power-text">
+                        <h3><svg class="icon" style="width:22px;height:22px"><use href="#i-bolt"/></svg> Energía garantizada<br><span>Generador propio</span></h3>
+                        <p>Para tu tranquilidad y la de tus invitados, llevamos nuestro <strong>generador de energía</strong>. Garantizamos energía estable en cada evento sin importar el lugar — el show no se corta nunca.</p>
+                        <ul class="power-list">
+                            <li><svg class="icon"><use href="#i-check"/></svg> Más autonomía y seguridad</li>
+                            <li><svg class="icon"><use href="#i-check"/></svg> Cero interrupciones</li>
+                            <li><svg class="icon"><use href="#i-check"/></svg> Servicio integral completo</li>
+                        </ul>
+                    </div>
+                    <div class="power-img">
+                        <div class="ring" aria-hidden="true"></div>
+                        <picture><source srcset="media/gen.webp" type="image/webp"><img src="media/gen.jpg" alt="Generador de energía propio de G.Group" loading="lazy" decoding="async"></picture>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TICKER 2 -->
+        <div class="ticker" aria-hidden="true">
+            <div class="ticker-track">
+                <span>15 años</span><span class="sep">◉</span><span>Casamientos</span><span class="sep">◉</span><span>Fiestas de 15</span><span class="sep">◉</span><span>Corporativos</span><span class="sep">◉</span><span>Open Format</span><span class="sep">◉</span><span>Generador propio</span><span class="sep">◉</span>
+                <span>15 años</span><span class="sep">◉</span><span>Casamientos</span><span class="sep">◉</span><span>Fiestas de 15</span><span class="sep">◉</span><span>Corporativos</span><span class="sep">◉</span><span>Open Format</span><span class="sep">◉</span><span>Generador propio</span><span class="sep">◉</span>
+            </div>
+        </div>
+
+        <!-- #04 EN ACCIÓN -->
+        <section class="track" id="accion" aria-label="Videos del show">
+            <div class="track-head reveal">
+                <p class="track-index">#04 — EN ACCIÓN</p>
+                <span class="watermark" aria-hidden="true">SHOW</span>
+                <h2 class="track-title">Momentos<br><span class="hl">reales</span></h2>
+            </div>
+
+            <div class="shows-grid">
+                <div class="show-item reveal">
+                    <p class="show-label">01 / LA PISTA</p>
+                    <video controls preload="metadata" poster="media/discoteca2.webp" aria-label="Video 1: la pista en un evento de DJ Giovani">
+                        <source src="media/video001.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="show-item wide reveal" data-d="1">
+                    <p class="show-label">02 / EL SET</p>
+                    <video controls preload="metadata" poster="media/discoteca4.webp" aria-label="Video 2: el set de DJ Giovani en acción">
+                        <source src="media/video002.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <!-- #05 TESTIMONIOS -->
+        <section class="testi" id="testimonios" aria-label="Testimonios de clientes">
+            <div class="track">
+                <div class="track-head reveal">
+                    <p class="track-index">#05 — RECADOS</p>
+                    <span class="watermark" aria-hidden="true">FANS</span>
+                    <h2 class="track-title">Lo que dice<br><span class="hl">la pista</span></h2>
+                </div>
+
+                <div class="testi-grid">
+                    <article class="testi-card reveal">
+                        <div class="top">FM</div>
+                        <p class="stars" aria-label="5 de 5 estrellas">★★★★★</p>
+                        <p class="testi-text">"La pista nunca estuvo vacía. La iluminación de G.Group cambió totalmente el salón. Recomendadísimo."</p>
+                        <p class="testi-author">— Boda Familia Méndez</p>
+                    </article>
+                    <article class="testi-card reveal" data-d="1">
+                        <div class="top">S15</div>
+                        <p class="stars" aria-label="5 de 5 estrellas">★★★★★</p>
+                        <p class="testi-text">"Muy profesional y atento a los detalles musicales que le pedimos. El sonido impecable."</p>
+                        <p class="testi-author">— 15 Años Sofía</p>
+                    </article>
+                    <article class="testi-card reveal" data-d="2">
+                        <div class="top">EC</div>
+                        <p class="stars" aria-label="5 de 5 estrellas">★★★★★</p>
+                        <p class="testi-text">"Excelente servicio, puntualidad y el equipamiento es de otro nivel. Gracias Giovani!"</p>
+                        <p class="testi-author">— Evento Corporativo Rivera</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA FINAL -->
+        <section class="pitch" aria-label="Contratación">
+            <div class="pitch-inner reveal">
+                <h2>¿Tu evento merece<br><span class="hl">otra fiesta?</span></h2>
+                <p>Presupuestá sin compromiso. Música, luces, pantallas y energía: todo en un solo equipo.</p>
+                <div class="hero-ctas" style="margin-top:0">
+                    <a class="cta" href="https://wa.me/59894302213" target="_blank" rel="noopener">
+                        <svg class="icon icon-sm"><use href="#i-wa"/></svg> Escribinos por WhatsApp
+                    </a>
+                </div>
+                <p class="phone-line">
+                    <svg class="icon icon-sm" style="vertical-align:-2px"><use href="#i-phone"/></svg>
+                    <a href="tel:+59894302213">+598 94 302 213</a>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <span class="brand-name" style="font-size:1.15rem">DJ&nbsp;GIOVANI</span>
+                <p><img src="media/ggroup.webp" alt="G.Group Sonorizaciones" style="height:34px;width:auto;margin-top:14px"></p>
+                <p>Música, luces, pantallas LED y energía propia para eventos en Rivera, Uruguay.</p>
+                <div class="footer-socials">
+                    <a class="social-btn" href="https://instagram.com/gioquinttana" target="_blank" rel="noopener" aria-label="Instagram de DJ Giovani"><svg class="icon"><use href="#i-ig"/></svg></a>
+                    <a class="social-btn" href="https://www.facebook.com/tijuana.eventos1" target="_blank" rel="noopener" aria-label="Facebook de G.Group"><svg class="icon"><use href="#i-fb"/></svg></a>
+                    <a class="social-btn" href="https://www.tiktok.com/@giovanidj2" target="_blank" rel="noopener" aria-label="TikTok de DJ Giovani"><svg class="icon"><use href="#i-tt"/></svg></a>
+                    <a class="social-btn" href="https://wa.me/59894302213" target="_blank" rel="noopener" aria-label="WhatsApp de DJ Giovani"><svg class="icon"><use href="#i-wa"/></svg></a>
+                </div>
+            </div>
+            <div>
+                <h3>Secciones</h3>
+                <ul class="footer-links">
+                    <li><a href="#sobre">Sobre el DJ</a></li>
+                    <li><a href="#equipo">Equipamiento</a></li>
+                    <li><a href="#energia">Energía garantizada</a></li>
+                    <li><a href="#accion">En acción</a></li>
+                    <li><a href="#testimonios">Testimonios</a></li>
                 </ul>
             </div>
-            <div class="gen-img">
-                <img src="gen.jpg" alt="Generador DJ Giovani" onclick="openLightbox(this.src)">
+            <div>
+                <h3>Contacto</h3>
+                <ul class="footer-links">
+                    <li><a href="tel:+59894302213">+598 94 302 213</a></li>
+                    <li><a href="https://wa.me/59894302213" target="_blank" rel="noopener">WhatsApp directo</a></li>
+                    <li><a href="https://instagram.com/gioquinttana" target="_blank" rel="noopener">@gioquinttana</a></li>
+                    <li><a href="https://www.tiktok.com/@giovanidj2" target="_blank" rel="noopener">@giovanidj2</a></li>
+                </ul>
             </div>
         </div>
-
-        <div class="zoom-video-container">
-            <video class="zoom-video" autoplay muted loop playsinline>
-                <source src="video003.mp4" type="video/mp4">
-            </video>
-            <p style="margin-top: 15px; color: #777; font-size: 0.8rem;">
-                <i class="fas fa-eye"></i> Pasa el mouse sobre el video para ver detalle
-            </p>
-        </div>
-    </section>
-
-    <section class="media-section reveal">
-        <h2 style="margin-bottom: 30px; text-transform: uppercase;">DJ Giovani en Acción</h2>
-        <div class="video-container">
-            <video controls poster="discoteca2.jpeg">
-                <source src="video001.mp4" type="video/mp4">
-            </video>
-            <video controls>
-                <source src="video002.mp4" type="video/mp4">
-            </video>
-        </div>
-    </section>
-
-    <section class="testimonials-section reveal">
-        <h2 style="color: var(--light); text-transform: uppercase;">Lo que dicen nuestros clientes</h2>
-        <div class="testi-grid">
-            <div class="testi-card">
-                <div class="stars">★★★★★</div>
-                <p class="testi-text">"La pista nunca estuvo vacía. La iluminación de G.Group cambió totalmente el salón. Recomendadísimo."</p>
-                <p class="testi-author">- Boda Familia Mendez</p>
-            </div>
-            <div class="testi-card">
-                <div class="stars">★★★★★</div>
-                <p class="testi-text">"Muy profesional y atento a los detalles musicales que le pedimos. El sonido impecable."</p>
-                <p class="testi-author">- 15 Años Sofia</p>
-            </div>
-            <div class="testi-card">
-                <div class="stars">★★★★★</div>
-                <p class="testi-text">"Excelente servicio, puntualidad y el equipamiento es de otro nivel. Gracias Giovani!"</p>
-                <p class="testi-author">- Evento Corporativo Rivera</p>
-            </div>
-        </div>
-    </section>
-
-    <footer class="main-footer">
-        <div class="footer-socials">
-            <a href="https://instagram.com/gioquinttana" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.facebook.com/tijuana.eventos1" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.tiktok.com/@giovanidj2" target="_blank"><i class="fab fa-tiktok"></i></a>
-        </div>
-        <div class="copyright">
-            <p>&copy; 2026 DJ Giovani | G.Group Sonorizaciones.</p>
-            <p style="margin-top: 10px; font-size: 0.8rem;">
-                Desarrollado por 
-                <a href="https://instagram.com/fbinformaticauy" target="_blank" class="dev-link">
-                    FB Informática <i class="fas fa-code"></i>
-                </a>
-            </p>
+        <div class="footer-bottom">
+            <span>© 2026 DJ Giovani | G.Group Sonorizaciones — Rivera, Uruguay</span>
+            <span>Desarrollado por <a class="dev-link" href="https://instagram.com/fbinformaticauy" target="_blank" rel="noopener">FB Informática</a></span>
         </div>
     </footer>
 
-    <a href="https://wa.me/59894302213" class="wsp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
+    <!-- WHATSAPP FLOAT -->
+    <a class="wsp" href="https://wa.me/59894302213" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+        <svg class="icon"><use href="#i-wa"/></svg>
     </a>
 
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Imagen ampliada">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar imagen ampliada"><svg class="icon"><use href="#i-close"/></svg></button>
+        <img id="lightboxImg" src="" alt="">
+    </div>
+
+    <!-- PLAYER CONSOLE -->
+    <div class="console" id="console" role="region" aria-label="Reproductor de música de fondo">
+        <div class="eq" id="eq" aria-hidden="true">
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+        </div>
+        <div class="lcd" aria-live="polite">
+            <span class="lcd-text" id="lcdText">◼ STANDBY — PRESIONÁ PLAY PARA INICIAR</span>
+        </div>
+        <div class="ctl">
+            <button class="ctl-btn" id="restartBtn" aria-label="Reiniciar música"><svg class="icon"><use href="#i-restart"/></svg></button>
+            <button class="play-btn" id="playBtn" aria-label="Reproducir o pausar la música"><svg class="icon" id="playIcon"><use href="#i-play"/></svg></button>
+        </div>
+    </div>
+
+    <audio id="bg-music" loop preload="metadata">
+        <source src="media/intro.mp3" type="audio/mpeg">
+    </audio>
+
+    <noscript>
+        <style>
+            html.js .reveal { opacity: 1 !important; transform: none !important; }
+            .noise, .cursor-glow, .vinyl-wrap { display: none !important; }
+        </style>
+    </noscript>
+
     <script>
-        // --- AUDIO ---
-        const audio = document.getElementById('bg-music');
-        const playBtn = document.getElementById('playBtn');
-        const pauseBtn = document.getElementById('pauseBtn');
-        const lcdText = document.getElementById('lcdText');
-        audio.volume = 0.5;
+        (function () {
+            'use strict';
+            var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-        function playMusic() {
-            audio.play().then(() => {
-                playBtn.classList.add('active-control');
-                pauseBtn.classList.remove('active-control');
-                lcdText.innerHTML = "♪ NOW PLAYING: DJ GIOVANI - ES FIESTA ES SHOW.MP3 (128 KBPS) --- G.GROUP LIVE ♪";
-                lcdText.classList.remove('paused-anim');
-            }).catch(e => console.log("Audio block: " + e));
-        }
-
-        function pauseMusic() {
-            audio.pause();
-            playBtn.classList.remove('active-control');
-            pauseBtn.classList.add('active-control');
-            lcdText.innerHTML = "|| PAUSED || CLICK PLAY TO RESUME ||";
-            lcdText.classList.add('paused-anim');
-        }
-
-        function restartMusic() {
-            audio.currentTime = 0;
-            playMusic();
-        }
-
-        // --- LIGHTBOX ---
-        function openLightbox(src) {
-            const lightbox = document.getElementById('lightbox');
-            const img = document.getElementById('lightbox-img');
-            img.src = src;
-            lightbox.style.display = 'flex';
-        }
-
-        function closeLightbox() {
-            document.getElementById('lightbox').style.display = 'none';
-        }
-
-        // --- SCROLL REVEAL ANIMATION ---
-        window.addEventListener('scroll', reveal);
-
-        function reveal() {
+            /* ---------- REVEAL ON SCROLL ---------- */
             var reveals = document.querySelectorAll('.reveal');
-            for (var i = 0; i < reveals.length; i++) {
-                var windowHeight = window.innerHeight;
-                var revealTop = reveals[i].getBoundingClientRect().top;
-                var revealPoint = 100; 
+            if ('IntersectionObserver' in window && !reduceMotion) {
+                var io = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (e) {
+                        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+                    });
+                }, { threshold: 0.14 });
+                reveals.forEach(function (el) { io.observe(el); });
+            } else {
+                reveals.forEach(function (el) { el.classList.add('in'); });
+            }
 
-                if (revealTop < windowHeight - revealPoint) {
-                    reveals[i].classList.add('active');
+            /* ---------- NEÓN CURSOR (desktop, sin reduced-motion) ---------- */
+            var glow = document.getElementById('cursorGlow');
+            var fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+            if (fine && !reduceMotion) {
+                var gx = -100, gy = -100, tx = -100, ty = -100;
+                document.addEventListener('mousemove', function (e) {
+                    tx = e.clientX; ty = e.clientY;
+                }, { passive: true });
+                (function loop() {
+                    gx += (tx - gx) * 0.18; gy += (ty - gy) * 0.18;
+                    glow.style.transform = 'translate(' + (gx - 13) + 'px,' + (gy - 13) + 'px)';
+                    requestAnimationFrame(loop);
+                })();
+            } else {
+                glow.style.display = 'none';
+            }
+
+            /* ---------- LIGHTBOX ---------- */
+            var lightbox = document.getElementById('lightbox');
+            var lightboxImg = document.getElementById('lightboxImg');
+            var lightboxClose = document.getElementById('lightboxClose');
+            var lastFocus = null;
+            function openLightbox(src, alt) {
+                lastFocus = document.activeElement;
+                lightboxImg.src = src;
+                lightboxImg.alt = alt || '';
+                lightbox.classList.add('open');
+                lightboxClose.focus();
+            }
+            function closeLightbox() {
+                lightbox.classList.remove('open');
+                lightboxImg.src = '';
+                if (lastFocus) lastFocus.focus();
+            }
+            lightboxClose.addEventListener('click', closeLightbox);
+            lightbox.addEventListener('click', function (e) { if (e.target === lightbox) closeLightbox(); });
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && lightbox.classList.contains('open')) closeLightbox();
+            });
+            document.querySelectorAll('[data-lightbox]').forEach(function (el) {
+                el.addEventListener('click', function () { openLightbox(el.src, el.alt); });
+            });
+
+            /* ---------- AUDIO PLAYER + EQ ---------- */
+            var audio = document.getElementById('bg-music');
+            var playBtn = document.getElementById('playBtn');
+            var playIcon = document.getElementById('playIcon');
+            var restartBtn = document.getElementById('restartBtn');
+            var consoleEl = document.getElementById('console');
+            var vinyl = document.getElementById('vinyl');
+            var lcdText = document.getElementById('lcdText');
+            var eqBars = document.querySelectorAll('#eq i');
+            audio.volume = 0.5;
+
+            var PLAYING_MSG = "♪ NOW PLAYING: DJ GIOVANI — ES FIESTA ES SHOW (128 KBPS) — G.GROUP LIVE ♪";
+            var STANDBY_MSG = "◼ STANDBY — PRESIONÁ PLAY PARA INICIAR";
+
+            var audioCtx = null, analyser = null, freq = null;
+            function ensureGraph() {
+                if (audioCtx) return;
+                try {
+                    var AC = window.AudioContext || window.webkitAudioContext;
+                    audioCtx = new AC();
+                    var src = audioCtx.createMediaElementSource(audio);
+                    analyser = audioCtx.createAnalyser();
+                    analyser.fftSize = 64;
+                    analyser.smoothingTimeConstant = 0.82;
+                    src.connect(analyser);
+                    analyser.connect(audioCtx.destination);
+                    freq = new Uint8Array(analyser.frequencyBinCount);
+                } catch (err) { audioCtx = null; }
+            }
+
+            function setPlaying(state) {
+                consoleEl.classList.toggle('playing', state);
+                vinyl.classList.toggle('spinning', state && !reduceMotion);
+                playIcon.innerHTML = '';
+                var use = document.createElementNS('http://www.w3.org/2000/svg', 'use');
+                use.setAttribute('href', state ? '#i-pause' : '#i-play');
+                playIcon.appendChild(use);
+            }
+
+            function updateLcd(state) {
+                lcdText.textContent = state ? PLAYING_MSG : STANDBY_MSG;
+                lcdText.classList.toggle('static', !state);
+            }
+
+            var eqTimer = null;
+            function renderEq() {
+                if (!analyser || !freq) return;
+                analyser.getByteFrequencyData(freq);
+                var n = eqBars.length;
+                var step = Math.max(1, Math.floor(freq.length / n));
+                for (var b = 0; b < n; b++) {
+                    var v = 0;
+                    for (var k = b * step; k < (b + 1) * step && k < freq.length; k++) { if (freq[k] > v) v = freq[k]; }
+                    var pct = 15 + (v / 255) * 85;
+                    eqBars[b].style.height = pct + '%';
                 }
             }
-        }
-        reveal();
-    </script>
+            function startEq() {
+                if (eqTimer || !analyser) return;
+                eqTimer = setInterval(renderEq, 33);
+            }
+            function stopEq() {
+                if (eqTimer) { clearInterval(eqTimer); eqTimer = null; }
+                Array.prototype.forEach.call(eqBars, function (bar) { bar.style.height = ''; });
+            }
 
+            function playMusic() {
+                ensureGraph();
+                var start = function () {
+                    var p = audio.play();
+                    if (p && p.catch) p.catch(function (e) { console.warn('Audio: ' + e); });
+                };
+                if (audioCtx && audioCtx.state === 'suspended') {
+                    audioCtx.resume().then(start);
+                } else { start(); }
+            }
+            function pauseMusic() { audio.pause(); }
+            function restartMusic() { audio.currentTime = 0; playMusic(); }
+
+            function toggle() {
+                if (audio.paused) { playMusic(); } else { pauseMusic(); }
+            }
+
+            playBtn.addEventListener('click', toggle);
+            restartBtn.addEventListener('click', restartMusic);
+            audio.addEventListener('play', function () {
+                setPlaying(true); updateLcd(true);
+                startEq();
+            });
+            audio.addEventListener('pause', function () {
+                setPlaying(false); updateLcd(false);
+                stopEq();
+            });
+
+            /* ---------- BOOTH VIDEO ---------- */
+            var booth = document.getElementById('booth');
+            var boothVideo = document.getElementById('boothVideo');
+            var boothUI = document.getElementById('boothUI');
+            var canHover = window.matchMedia('(hover: hover)').matches;
+            if (canHover) {
+                booth.addEventListener('mouseenter', function () {
+                    boothUI.classList.add('hidden');
+                    boothVideo.play().catch(function () {});
+                });
+                booth.addEventListener('mouseleave', function () {
+                    boothVideo.pause();
+                    boothUI.classList.remove('hidden');
+                });
+            }
+            booth.addEventListener('click', function () {
+                if (boothVideo.paused) { boothUI.classList.add('hidden'); boothVideo.play().catch(function () {}); }
+                else { boothVideo.pause(); boothUI.classList.remove('hidden'); }
+            });
+        })();
+    </script>
 </body>
 </html>
