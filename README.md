@@ -18,8 +18,17 @@ Landing page de **DJ Giovani & G.Group Sonorizaciones** (Rivera, Uruguay). Sitio
 |---|---|
 | `index.html` | Página principal (CSS + JS inline). |
 | `media/` | Assets optimizados (WebP + fallback JPG, videos H.264, audio). |
-| `robots.txt` / `sitemap.xml` | SEO. |
+| `robots.txt` / `sitemap.xml` / `llms.txt` | SEO (crawlers clásicos + motores de IA tipo ChatGPT). |
 | `CNAME` | Dominio personalizado para GitHub Pages. |
+
+## SEO local
+
+Posicionamiento para búsquedas como "dj en rivera", "discoteca en rivera" o "dj para 15 en Rivera":
+
+- **Contenido:** sección de servicios y FAQ con las frases que usa la gente, escritas de forma natural.
+- **Datos estructurados:** `EntertainmentBusiness` (con `geo`, `areaServed` y catálogo de servicios) + `FAQPage`.
+- **`llms.txt`:** resumen legible para motores de IA (ChatGPT, Gemini, Perplexity).
+- **Verificación:** registrá propiedades en [Google Search Console](https://search.google.com/search-console) y [Bing Webmaster](https://www.bing.com/webmasters) usando `media/favicon.png` o verificación por DNS.
 
 ## Desarrollo
 
